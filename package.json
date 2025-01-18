@@ -1,0 +1,40 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "postinstall": "nuxt prepare",
+    "preview": "nuxt build && npx nuxthub preview",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "auth:generate": "npx @better-auth/cli generate --config ./server/utils/auth.ts --output ./server/database/schema/auth.ts --y"
+  },
+  "dependencies": {
+    "@nuxthub/core": "^0.8.12",
+    "@nuxtjs/tailwindcss": "^6.13.1",
+    "@pinia/nuxt": "^0.6.1",
+    "better-auth": "1.1.10",
+    "drizzle-orm": "^0.38.4",
+    "drizzle-zod": "^0.6.1",
+    "es-toolkit": "^1.31.0",
+    "lucide-vue-next": "^0.468.0",
+    "nuxt": "^3.15.2",
+    "vue": "latest",
+    "vue-router": "latest",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250109.0",
+    "@vueuse/core": "^11.3.0",
+    "drizzle-kit": "^0.30.2",
+    "postgres": "^3.4.5",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
+    "vue-tsc": "^2.2.0",
+    "wrangler": "^3.103.2"
+  },
+  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228"
+}

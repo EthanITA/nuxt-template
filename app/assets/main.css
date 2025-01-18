@@ -1,0 +1,12 @@
+@import "tailwind.css";
+
+:root {
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html, #__nuxt, body {
+  @apply h-full w-full;
+}
