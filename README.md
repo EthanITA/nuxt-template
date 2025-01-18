@@ -1,75 +1,105 @@
-# Nuxt Minimal Starter
+# Nuxt Starter Template Documentation
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This Nuxt starter template is a full-stack application boilerplate designed for rapid development and deployment. It integrates essential tools and frameworks like NuxtHub, Tailwind CSS, Drizzle ORM, and Better-Auth, ensuring a smooth development experience. Below is an overview of the template's features, structure, and usage instructions.
 
-## Setup
+## Features
 
-Make sure to install dependencies:
+1. **Nuxt 3 Integration**: Built on Nuxt 3 for a modern, performance-driven framework with server-side rendering (SSR) and static site generation (SSG) capabilities.
+2. **NuxtHub**: Enhances development with tools and utilities for deploying and managing your Nuxt app on Cloudflare.
+3. **Tailwind CSS**: Integrated for rapid, utility-first CSS styling.
+4. **Pinia**: Provides state management out of the box.
+5. **Drizzle ORM**: Simplifies database management with a lightweight ORM.
+6. **Better-Auth**: Offers a streamlined authentication system.
+7. **Zod**: Ensures type-safe data validation.
+8. **Vue Router and VueUse**: For advanced routing and reusable utilities.
 
-```bash
-# npm
-npm install
+## File Overview
 
-# pnpm
-pnpm install
+### `package.json`
 
-# yarn
-yarn install
+This file manages dependencies, scripts, and other configurations.
 
-# bun
-bun install
-```
+#### Scripts:
 
-## Development Server
+- `build`: Builds the production-ready Nuxt application.
+- `dev`: Starts the development server.
+- `generate`: Generates a static version of the site.
+- `postinstall`: Prepares Nuxt after installing dependencies.
+- `preview`: Builds and previews the application locally using NuxtHub.
+- `db:generate`: Generates database schema using Drizzle Kit.
+- `db:migrate`: Applies database migrations using Drizzle Kit.
+- `auth:generate`: Generates authentication configuration and schema.
 
-Start the development server on `http://localhost:3000`:
+#### Dependencies:
 
-```bash
-# npm
-npm run dev
+- Core dependencies include Nuxt, Vue, Drizzle ORM, Better-Auth, and Tailwind CSS.
+- Development dependencies include TypeScript, Drizzle Kit, Prettier, and Wrangler for Cloudflare Workers.
 
-# pnpm
-pnpm dev
+## Setup Instructions
 
-# yarn
-yarn dev
+1. **Clone the Repository**:
 
-# bun
-bun run dev
-```
+   ```bash
+   git clone https://github.com/EthanITA/nuxt-template
+   cd nuxt-template
+   ```
 
-## Production
+2. **Install Dependencies**:
+   Ensure you have PNPM installed, then run:
 
-Build the application for production:
+   ```bash
+   pnpm install
+   ```
 
-```bash
-# npm
-npm run build
+3. **Environment Configuration**:
+   Create a `.env` file in the root directory to store your environment variables. Refer to `.env.example` for required variables.
 
-# pnpm
-pnpm build
+4. **Run the Development Server**:
 
-# yarn
-yarn build
+   ```bash
+   pnpm dev
+   ```
 
-# bun
-bun run build
-```
+   Access the application at `http://localhost:3000`.
 
-Locally preview production build:
+5. **Build and Preview**:
 
-```bash
-# npm
-npm run preview
+    - Build the application:
+      ```bash
+      pnpm build
+      ```
+    - Preview the production build on Cloudflare, locally:
+      ```bash
+      pnpm preview
+      ```
 
-# pnpm
-pnpm preview
+## Deployment
 
-# yarn
-yarn preview
+The template is ready to be deployed to NuxtHub or your preferred provider by removing NuxtHub from nuxt.config.ts. Make sure to:
 
-# bun
-bun run preview
-```
+- Configure environment variables in the hosting platform.
+- Use `pnpm build` to generate a production-ready version of the app.
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Contribution and Customization
+
+Feel free to modify the template to suit your project requirements. Contributions to improve the starter template are welcome.
+
+### Useful Commands
+
+- **Linting and Formatting**:
+  ```bash
+  pnpm prettier --write .
+  ```
+- **Type Checking**:
+  ```bash
+  pnpm vue-tsc --noEmit
+  ```
+
+## Support
+
+If you encounter any issues or have questions, please open an issue in the repository or reach out to the maintainers.
+
+---
+
+Start building with this robust Nuxt starter template and accelerate your development process!
+
